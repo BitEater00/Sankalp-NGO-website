@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sankalp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/icon.svg">
+    </head>
+    <body onload="countermover()">
+        <!--NavBar Code -->
+        <nav class="navbar navbar-light shadow mb-5 navbar-expand-lg">
+            <div class = "container-fluid">
+                <a class="navbar-brand ml-lg-5" href="#" style="color:#cf4996;"><h1>Sankalp</h1></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ml-auto active_border"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link" href="About.html">About Us</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link" href="Events.html">Events</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link" href="Registration.html">Registration</a></li>
+                    <li class="nav-item ml-auto mr-lg-5"><a class="nav-link" href="#">
+                        <div id = "ContactModalClass" onclick="ShowModal()">
+                            Contact Us
+                        </div>
+                        <script>
+                            function ShowModal()
+                            {
+                                $("#contactModal").modal("show");
+                            }
+                        </script>
+                    </a></li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+        <!--End of Nav Code-->
+        <!--Vision Code-->
+        <div class = "container-fluid pt-5">
+            <div class = "row justify-content-center">
+                <div class="col-sm-12 col-lg-6 pl-2">
+                    <img src="img/first/66169.jpg" class="img-fluid pb-5 mb-5 align-middle image-poster" alt="Responsive image">
+                </div>
+                <div class ="col-sm-12 col-lg-6 pl-lg-5 pb-5 mb-5" >
+                    <div class="text-container align-middle mt-5">
+                        <div class="tagline">Vision</div>
+                        <br>
+                        <div class="text">
+                        Develop world class institution to cater the quality affordable
+                        services in the field of education for facility starved students 
+                        of rural India.
+                        <br><br>
+                        भारत के ग्रामीण क्षेत्र के छात्र/छात्राओ को शैक्षणिक सुविधा देकर विश्व स्तर के विधार्थियो के समतुल्य बनाना |
+                        </div>
+                    </div>
+                    <button class="button" onclick="AboutPageRedirect()">Learn More</button>
+                    <script>
+                        function AboutPageRedirect()
+                        {
+                            window.location.href = "About.html";
+                        }
+                    </script>
+                </div>
+            </div>  
+        </div>
+        <!--Vision Code Ended-->
+        <div class="container-fluid" style="height: 2.5vmax;"></div>
+        <!--Mission-->
+        <div class ="container-fluid">
+            <div class = "row justify-content-center">
+                <div class ="col-sm-12 col-lg-6 pb-5 mb-5 pl-lg-5">
+                    <div class="text-container align-middle">
+                        <div class="tagline pl-1">Our Mission</div>
+                        <br>
+                        <div class="text">
+                        Sankalp educates meritorious and facility starved students,enhances
+                        intellectual growth and enriches lives to become truly world class
+
+                        <br><br>
+                        संकल्प संस्थान से जुड़े मेधावी विधाथियों को बौद्धिक विकास कर विश्वस्तरीय बनाना |
+                        </div>
+                    </div>
+                    <button class="button" onclick="RegistrationPageRedirect()">Join our Journey</button>
+                    <script>
+                        function RegistrationPageRedirect()
+                        {
+                            window.location.href = "Registration.html";
+                        }
+                    </script>
+                </div>
+                <div class="col-sm-12 col-lg-6 pl-5">
+                    <img src="img/second/66162.jpg" class="img-fluid pb-5 mb-5 align-middle image-poster" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+        <!--Mission End-->
+        <div class="container-fluid" style="height: 3.5vmax;"></div>
+        <!--Students and Volunteers Code Start-->
+        <div class ="container-fluid" style="background-color: #302c2a;" id="loadingneeded">
+            <div class ="row pb-5">
+                <div class="col-sm-12 col-lg-3 poster">
+                    <div class ="row justify-content-center">
+                        <img src="img/study.png" class="img-fluid pb-3">
+                    </div>
+                    <div class ="row justify-content-center pb-3 counter" data-target="700">
+                        0
+                    </div>
+                    <div class ="row justify-content-center">
+                        Students Taught
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-3 poster">
+                    <div class ="row justify-content-center">
+                        <img src="img/vol.png" class="img-fluid pb-3">
+                    </div>
+                    <div class ="row justify-content-center pb-3 counter" data-target="19">
+                        0
+                    </div>
+                    <div class ="row justify-content-center">
+                        Total Volunteers 
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-3 poster">
+                    <div class ="row justify-content-center">
+                        <img src="img/event.png" class="img-fluid pb-3">
+                    </div>
+                    <div class ="row justify-content-center pb-3 counter" data-target="40">
+                        0
+                    </div>
+                    <div class ="row justify-content-center">
+                       Successful Events
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-3 poster">
+                    <div class ="row justify-content-center">
+                        <img src="img/happy.png" class="img-fluid pb-3">
+                    </div>
+                    <div class ="row justify-content-center pb-3 counter" data-target="30">
+                        0
+                    </div>
+                    <div class ="row justify-content-center">
+                        Happy Donators
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Students and Volunteers Code End-->
+        <div class="container-fluid" style="height: 7vmax; background-color: #fbfbfb;"></div>
+        <!--Special Achivers-->
+        <div class="container-fluid" style="background-color: #fbfbfb;">
+            <div class="row justify-content-center" style="padding-bottom: 10vmin;">
+                <div class = "tagline">
+                    Meet Our Special Achievers
+                </div>
+            </div>
+
+            <div class = "row justify-content-center">
+                <div class = "col-sm-8 col-lg-3 ml-auto mr-auto mt-4">
+                    <div class="card shadow-lg">
+                        <img class="card-img-top" src="img/ach/1.jpg" alt="Card image cap" height="400px">
+                        <div class="card-body">
+                            <div class = "row justify-content-center">
+                                <h3>Aprajita Kumara</h3>
+                            </div>
+                            <div class="row justify-content-center m-1">
+                                Dinara district Topper in C.B.S.E with 96%
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class = "col-sm-8 col-lg-3 ml-auto mr-auto mt-4">
+                    <div class="card shadow-lg">
+                        <img class="card-img-top" src="img/ach/2.jpg" alt="Card image cap" height="400px">
+                        <div class="card-body">
+                            <div class = "row justify-content-center">
+                                <h3>Arshad Arzoo</h3>
+                            </div>
+                            <div class="row justify-content-center m-1">
+                                Dinara district Topper in Bihar Board
+                                <br><br>
+                                First rank in Distric Level Quiz Competition
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class = "col-sm-8 col-lg-3 ml-auto mr-auto mt-4">
+                    <div class="card shadow-lg">
+                        <img class="card-img-top" src="img/ach/4.jpg" alt="Card image cap" height="400px">
+                        <div class="card-body">
+                            <div class = "row justify-content-center">
+                                <h3>Shivam Kumar Singh</h3>
+                            </div>
+                            <div class="row justify-content-center m-1">
+                                2nd rank in Distric Level Quiz Competition
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <div class = "row justify-content-center mt-5">
+                <div class = "button m-3" onclick="location.href = 'SpecialAchievers.html'"> Meet Them All</div>
+            </div>
+        </div>
+        <!--Special Achivers End-->
+        <div class="container-fluid" style="height: 2.5vmax; background-color: #fbfbfb;"></div>
+        <div class="container-fluid" style="height: 5.5vmax;"></div>
+        <!--Volunteer start-->
+            <div class = "container-fluid">
+                <div class = "row justify-content-center">
+                    <div class="col-sm-12 col-lg-6 pl-5">
+                        <img src="img/third.PNG" class="img-fluid pb-5 mb-5 align-middle image-poster" alt="Responsive image">
+                    </div>
+                    <div class ="col-sm-12 col-lg-6 pl-lg-5 pb-5 mb-5">
+                        <div class="text-container align-middle">
+                            <div class = "tagline pb-5">
+                                Be a Part of Our Team
+                            </div>
+                            <div class="text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
+                            </div>
+                        </div>
+                        <button class="button" onclick="Volunteer()">Register</button>
+                        <script>
+                            function Volunteer()
+                            {
+                                window.location.href = "https://forms.gle/YuxK498gVqdwjaTt7";
+                            }
+                        </script>
+                    </div>
+                </div>  
+            </div>
+        <!--Volunteer End-->
+        <div class="container-fluid" style="height: 2.5vmax;"></div>
+        <!--Blog and News-->
+        <div class = "container-fluid">
+            <div class = "row justify-content-center">
+                <div class = "tagline pl-lg-5">Our Impact</div>
+            </div>
+            <div class ="row" style="height: 3vmax;"></div>
+        </div> 
+
+        <div class = "container-fluid mt-5">
+            <div class = " row">
+                <div class = "col-12">
+                    <div class="main-carousel" data-flickity='{"autoPlay": 2000,"wrapAround":true,"adaptiveHeight": true,"pageDots":false,"imagesLoaded":true}'>
+                        <div class="carousel-cell common" id = "1">
+                            <div class = "card p-2" id="1b">
+                                <img src = "img/news/1.jpeg"  class = "class-img-top ">
+                                <div class = "card-body">
+                                    
+                                    <div class = "card-text">
+                                        दिनारा (रोहतास). संकल्प शैक्षणिक
+
+                                        संस्थान दिनारा के सात ओजस्वी छात्रों को कलेडेशकोप फाउंडेशन ने 85-85 हजार रुपये उच्च शिक्षा के लिए 
+                                        छात्रवृत्ति प्रदान की| <span id = "dots1">...</span><span id="more1">छात्रवृत्ति पाने वालों में बरियारपुर गांव के शिवम कुमार पिता संजय सिंह, गुड़गांव के 
+                                        अतुल आनंद- पिता जितेंद्र कुमार, भुसावल गांव के शुभम तिवारी- पिता विपिन तिवारी, दिनारा के अरशद 
+                                        आरजू पिता एजाज अहमद, प्रेम कुमार- पिता विक्रमादित्य सिंह व नेहा कुमारी- पिता दयाशंकर गुप्ता व 
+                                        मुस्तफापुर के इफशा परवीन- पिता कमरुल खान शामिल हैं| छात्रवृत्ति मिलने पर संकल्प शैक्षणिक संस्थान के 
+                                        संस्थापक निलेश कुमार सिंह व निदेशक मुकेश कुमार सिंह ने छात्रों, अभिभावकों व शिक्षकों को बधाई दी| 
+                                        उन्होंने कहा कि बच्चों को 5.95 लाख रुपये उच्च शिक्षा के लिए दिये गये हैं| इसके साथ उनकी हर स्तर पर 
+                                        मॉनीटरिंग होगी| अच्छे कॉलेज में दाखिला के लिए मार्गदर्शन दिया जायेगा| संस्थान के निदेशक ने बताया कि 
+                                        संस्थान सुराना सर का सदा आभारी रहेगा क्योंकि संकल्प के बच्चों के लिए इन्होंने जो किया है, वह दिनारा 
+                                        के लिए  हमेशा याद किया जायेगा| इसमें संस्थान के संस्थापक नीलेश कुमार सिंह का भी महत्वपूर्ण योगदान 
+                                        रहा है| मौके पर वरीय शिक्षक विद्यार्थी सिंह, मनोज तिवारी, उदय नारायण सिंह, सत्येंद्र कुमार, 
+                                        सत्यनारायण सिंह, शैलेंद्र सिंह, अंजनी कुमार आदि मौजूद थे|</span>
+                                    </div>
+                                    <br><button class="button" onclick="myFunction(1)" id="myBtn1">Read More</a>
+                                </div>  
+                        </div></div>
+                        
+                        <div class="carousel-cell common" id = "2">
+                            <div class = "card p-2" id="2b">
+                                <img src = "img/news/2.jpeg" class = "class-img-top ">
+                                <div class = "card-body" >
+                                    
+                                    <div class = "card-text">
+                                        दिनारा . प्रखंड मुख्यालय आदर्श
+                                        
+                                        पुस्तकालय का उद्घाटन शुक्रवार को हुआ| पुस्तकालय का उद्घाटन संकल्प शैक्षणिक संस्थान के निदेशक 
+                                        मुकेश कुमार सिंह ने किया| <span id = "dots2">...</span><span id="more2">वे अपने पुत्र स्व| आदर्श राज के जन्म दिवस पर पुस्तकालय की स्थापना किये| 
+                                        निर्देश ने बताया कि मेरे पुत्र आदर्श राज का हृदय रोग के कारण एम्स दिल्ली में निधन हो गया था| मेरे मन 
+                                        में अपने बेटे की स्मृति में पुस्तकालय स्थापना की हसरत थी, जो आज पूरी हो गयी| 
+                                        यह पुस्तकालय हमेशा उसकी याद दिलाते रहेगा| उन्होंने बताया कि संकल्प संस्थान के संस्थापक इंजीनियर 
+                                        निलेश कुमार सिंह ने पुस्तकालय का नाम आदर्श पुस्तकालय रखा है| पुस्तकालय के लिए दान देने वालों में 
+                                        संस्थान के संस्थापक निलेश कुमार सिंह ने 30 हजार रुपये, निदेशक ने 5 हजार रुपये, उपाध्यक्ष विजय 
+                                        कुमार ने 10 हजार रुपये, प्रोजेक्ट मैनेजर रॉकवेल कॉलिस यूएसए मोहित सैनी ने पांच हजार रुपये, बलदेव 
+                                        हाई स्कूल के प्रधानाध्यापक शैलेंद्र सिंह ने आईआईटी लेवल व मोटिवेशनल बुक प्रदान की| 
+                                        मथिया निवासी उदय नारायण सिंह, अमन कुमार, नेहा तिवारी आदि पुस्तकालय को बुक दान किया| 
+                                        निदेशक ने कहा कि यह पुस्तकालय केवल आनेवाले दिनों में पूरे दिनारा के छात्रों के लिए बहुत उपयोगी सिद्ध 
+                                        होगा|</span>
+                                    </div>
+                                    <br><button class="button" onclick="myFunction(2)" id="myBtn2">Read More</a>
+                                </div>  
+                        </div></div>
+                        
+                        <div class="carousel-cell common" id = "3">
+                            <div class = "card p-2" id="3b">
+                                <img src = "img/news/3.jpeg" class = "class-img-top ">
+                                <div class = "card-body" >
+                                    
+                                    <div class = "card-text">
+                                        बिहार बोर्ड मैट्रिक वार्षिक परीक्षा 2020 में संकल्प शैक्षणिक संस्थान दिनारा के छात्रों ने परचम लहराकर 
+                                        संस्थान का गौरव बढ़ाया है| <span id = "dots3">...</span><span id="more3">संस्थान के तरफ से हार्दिक बधाई एवं उनके उज्जवल भविष्य के लिए कामना 
+                                        संस्थान के संस्थापक निलेश सिंह एवं निदेशक मुकेश कुमार सिंह के द्वारा की गयी| साथ ही बच्चों को मिठाई 
+                                        खिलायी गई|संकल्प शैक्षणिक संस्थान ब्लॉक मोड़ दिनारा से छात्रों में पहले स्थान पर अरशद आरजू (446) 
+                                        पिता एजाज अहमद दिनारा, दूसरे स्थान पर शिवम कुमार(413) पिता संजय सिंह बरियारपुर, 
+                                        तीसरे स्थान पर इफशा परवीन 1412 मुस्तफापुर, चौथे नंबर पर नेहा तिवारी 408 भुसावल, 
+                                        पचवें नंबर पर प्रेम कुमार गौरा छठे नंबर पर अमरदीप पटेल 408 चितांव, आठवें नंबर पर संदीप 
+                                        पटेल चितांव अच्छे अंक प्राप्त किए हैं| संस्थान के कुल छात्रों में 89 परसेंट छात्र ने प्रथम श्रेणी से 
+                                        सफलता हासिल की है| संस्थान में अध्ययनरत छात्र अरशद आरजू ने संस्थान के साथ-साथ बलदेव 
+                                        उच्च विद्यालय दिनारा में भी अपना प्रथम स्थान प्राप्त कर अपने माता-पिता का नाम रोशन किया है|
+                                        अरशद आरजू दिनारा के एजाज अहमद के बड़े बच्चे हैं| उनके पिता द्वारा में टेलरिंग का काम करते हैं| 
+                                        संस्थान की ओर से उज्जवल भविष्य की कामना की गयी है| मौके पर संस्थान के निदेशक मुकेश कुमार सिंह, 
+                                        शैलेंद्र सिंह, अंजनी कुमार, उदय नारायण सिंह, विधार्थी सिंह, र सत्येंद्र कुमार सिंह, मनोज तिवारी, 
+                                        वें सत्य नारायण सिंह एवं समस्त संकल्प र परिवार उपस्थित था| </span>
+                                    </div>
+                                    <br><button class="button" onclick="myFunction(3)" id="myBtn3">Read More</a>
+                                </div>  
+                        </div></div>
+
+                        <div class="carousel-cell common" id = "4">
+                            <div class = "card p-2" id="4b">
+                                <img src = "img/news/4.jpeg" class = "class-img-top ">
+                                <div class = "card-body" >
+                                    
+                                    <div class = "card-text">
+                                        प्रखंड मुख्यालय पर स्थित बलदेव उच्च माध्यमिक विद्यालय के प्रांगण में संकल्प संस्थान की ओर से सुपर 30 
+                                        में दाखिला के लिए परीक्षा का आयोजन किया गया|<span id = "dots4">...</span><span id="more4">दाखिला परीक्षा में भाग लेने के लिए सुबह 10 बजे से 
+                                        ही परीक्षार्थी परीक्षा केंद्र पर पहुंचने लगे| देखते ही देखते प्रखंड के दिनारा, रोड, समहुती ,महरोढ, पंडितपुरा,
+                                        अकोला, वेलवैया, पिथनी, गोपालपुर, भानस सहित दर्जनों गांवों के सैकड़ों की संख्या में छात्र-छात्रा एकत्रित 
+                                        हो गये| संकल्प संस्थान की परीक्षा संचालन टीम को काफी परिश्रम करना पड़ा| परीक्षा दिन के 11 बजे प्रारंभ 
+                                        हुई व दिन के एक बजे समाप्त हुई| वहीं रिपोर्टिंग करने का समय सुबह नौ बजे रखा गया था| परीक्षा में कुल 
+                                        मैथमेटिक्स, मेंटल एबिलिटी से जुड़े प्रश्नों के साथ प्रश्न पूछे गये, जिसका पूर्णांक 100 था| परीक्षा में 889 
+                                        छात्र-छात्राओं ने भाग लेकर सुपर 30 में नामांकन लेकर अपना भाग्य आजमाए| संस्थान के निदेशक मुकेश कुमार 
+                                        सिंह ने बताया कि रिजल्ट 30 दिसंबर तक घोषित किया जायेगा| इसके बाद 30 टॉप मेधावी छात्र छात्राओं का मुफ्त 
+                                        नामांकन कर मुफ्त में शिक्षा सहित शिक्षण सामग्री उपलब्ध करायी जायेगी| संस्थापक लंदन में कार्यरत आइआइटीएन 
+                                        निलेश कुमार सिंह ने दूरभाष पर बताया कि संस्थान का उदेश्य ग्रामीण क्षेत्रों में उच्चस्तरिय शिक्षा उपलब्ध कराना है| 
+                                        उन्होंने बताया कि संस्थान के चार मेधावी छात्र-छात्राओं को पचास-पचास हजार रुपये की छात्रवृत्ति 2020 में उपलब्ध 
+                                        करायी जायेगी, कि उत्कृष्ट शिक्षा ग्रहण करने में खराब आर्थिक स्थिति बाधा नहीं बना जानकारी के अनुसार, संकल्प 
+                                        संस्थान द्वारा प्रत्येक साल सुपर 30 के तर्ज पर नामांकित 30 छात्रों को मुफ्त में शिक्षा दी जाती है| संस्थान के छात्र 
+                                        छात्राओं द्वारा 2019 के मैट्रिक परीक्षा में 90 प्रतिशत से अधिक प्रथम स्थान प्राप्त किया था|</span>
+                                    </div>
+                                    <br><button class="button" onclick="myFunction(4)" id="myBtn4">Read More</a>
+                                </div>  
+                        </div></div>
+
+                        <div class="carousel-cell common" id = "5">
+                            <div class = "card p-2" id="5b">
+                                <img src = "img/news/5.jpeg" class = "class-img-top ">
+                                <div class = "card-body" >
+                                    
+                                    <div class = "card-text">
+                                        प्रखंड मुख्यालय पर बाजार रोड में स्थित संकल्प शैक्षणिक संस्थान द्वारा अलग अलग विद्यालयों में सीबीएसई 
+                                        10वीं की परीक्षा में अपने प्रतिभा का परचम<span id = "dots5">...</span><span id="more5">लहरानेवाले 
+                                        छात्र-छात्राओं को सम्मानित किया गया| संकल्प शैक्षणिक संस्थान ने बिहार बोर्ड के 10वीं के परीक्षा में दिनारा टॉपर दिया था| 
+                                        वहीं, सीबीएसई के 10वीं की 
+                                        परीक्षा में भी संस्थान में कोचिंग प्राप्त कर रही चार्टर इंटरनेशनल की छात्रा अपराजिता ने 96% अंक लाकर दिनारा
+                                        टॉपर बनकर संस्थान को दोहरी खुशी दी है| संस्थान में कोचिंग ग्रहण कर रहीं मास्टर माइंड ग्लोबल स्कूल की 
+                                        छात्रा अंजली व होलीफेथ की नेहा 80% से अधिक अंक लाकर संस्थान का गौरव बढ़ायी है| इस अवसर पर निदेशक 
+                                        मुकेश कुमार सिंह द्वारा तीनों छात्राओं को सम्मानित किया गया| इस अवसर पर निदेशक ने इनकी उज्जवल भविष्य 
+                                        का सामना किया| इस अवसर पर संस्था के संस्थापक निलेश कुमार सिंह ने कहा कि दिनारा का इकलौता शिक्षण 
+                                        संस्थान है, जहां से बिहार बोर्ड और सीबीएसइ दोनों का टॉपर छात्र एक ही स्थान से निकले| जिस उद्देश्य के साथ 
+                                        दिनारा में संकल्प का स्थापना किया गया था| आज वह सपना साकार होते हुए दिख रहा है|</span>
+                                    </div>
+                                    <br><button class="button" onclick="myFunction(5)" id="myBtn5">Read More</a>
+                                </div>  
+                        </div></div>
+
+                        <div class="carousel-cell common" id = "6">
+                            <div class = "card p-2" id="6b">
+                                <img src = "img/news/6.jpeg" class = "class-img-top ">
+                                <div class = "card-body" >
+                                    
+                                    <div class = "card-text">
+                                        दिनारा. 
+                                        प्रखंड मुख्यालय स्थित संकल्प संस्थान के बच्चों ने मशहूर गणितज्ञ वशिष्ठ नारायण सिंह को 
+                                        आयोजित सभा में शुक्रवार को श्रद्धांजलि दी| <span id = "dots6">...</span><span id="more6">दो मिनट का मौन रख कर दिवंगत आत्मा की शांति के 
+                                        लिए ईश्वर से प्रार्थना की गयी| संस्थान के निदेशक मुकेश कुमार सिंह ने स्वर्गीय डॉ वशिष्ठ के कृतित्व 
+                                        व व्यक्ति पर प्रकाश डालते हुए कहा कि डॉ साहब आजीवन अपने ज्ञान का प्रसाद छात्रों के बीच में 
+                                        बांटते रहें| वे असहाय व गरीबों को शिक्षा के प्रति जागरूक करने के लिए सदा याद किये जायेंगे| 
+                                        अन्य वक्ताओं ने कहा कि वशिष्ठ जैसे विद्वान सौ साल में एक ही पैदा होते हैं| निदेशक ने अपने संस्थान 
+                                        के एक हॉल का नाम वशिष्ठ नारायण सिंह के नाम पर रखने का संकल्प लिया|</span>
+                                    </div>
+                                    <br><button class="button" onclick="myFunction(6)" id="myBtn6">Read More</a>
+                                </div>  
+                        </div></div>
+
+                        <div class="carousel-cell common" id = "7">
+                            <div class = "card p-2" id="7b">
+                                <img src = "img/news/7.jpeg" class = "class-img-top ">
+                                <div class = "card-body" >
+                                    
+                                    <div class = "card-text">
+                                        प्रखंड मुख्यालय स्थित संकल्प संस्थान के दूसरे स्थापना दिवस के पर संस्थान के संस्थापक ई.निलेश कुमार 
+                                        सिंह के मार्गदर्शन व संस्थान के निदेशक<span id = "dots7">...</span><span id="more7"> मुकेश कुमार के नेतृत्व में छात्र-छात्राओं ने पर्यावरण की रक्षा का 
+                                        संकल्प लेते हुए जागरूकता रैली निकाली, जो संस्थान के प्रांगण से चलकर बिहार होते हुए एनएच 30 पर स्थित
+                                        बलदेव उच्च विद्यालय के प्रांगण में पहुंचा| इस दौरान छात्र-छात्राओं द्वारा धरती की हरियाली के लिए स्लोगन लिखे 
+                                        तख्तियों के नि साथ पर्यावरण की रक्षा के लिए नारा भी लगाया गया| संस्थान के छात्र व कु शिक्षकों द्वारा बलदेव 
+                                        उच्च विद्यालय के प्रांगण में 150 फलदार पौधे लगाये गये| इस अवसर पर छात्रों द्वारा जल संरक्षण के लिए लोगों 
+                                        को आगे आने का आग्रह भी किया गया| पौधारोपण के बाद छात्रों की रैली पुनः संस्थान के प्रांगण में पहुंचा, 
+                                        जहां छात्रों को शिक्षकों द्वारा पर्यावरण की रक्षा व धरती की हरियाली बनाए रखने के गुर बताये गये| इस अवसर 
+                                        पर संस्थान के निदेशक मुकेश कुमार सिंह ने कहा कि प्रत्येक छात्रों को अपने जन्मदिन के अवसर पर कम-से-कम 
+                                        पांच पौधे लगाना चाहिए| मौके पर शिवशंकर प्रसाद, विद्यार्थी सिंह, शैलेंद्र सिंह, मनोज कुमार तिवारी, 
+                                        सतेंद्र कुमार, संगीता कुमारी, अंजनी कुमार, राधाकृष्णन सहित अन्य शिक्षक व छात्र उपस्थित थे|</span>
+                                    </div>
+                                    <br><button class="button" onclick="myFunction(7)" id="myBtn7">Read More</a>
+                                </div>  
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Blog End-->
+        <div class="container-fluid" style="height: 7vmax;"></div>
+        <!--Footer-->
+        <div class = "container-fluid" style="background-color: #302c2a;">
+            <div class = "row justify-content-center" style="color: #808080;">
+            <div class = "ftagline pb-2" style="color: #cf4996">Sankalp Foundation</div>
+        </div>
+        <!--Footer End-->
+        <!--Modal Class-->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="contactModalLabel">Contact Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Address</p>
+                  <p>Near Block More Bazar Road<br>Dinara<br>Bihar- 802213</p>
+                  <p>Email <br>ReachBasantiEducationWelfare@gmail.com</p> 
+                  <p>Phone No <br>9386268569</p> 
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Modal Class End-->  
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src = "js/index.js"></script>
+</html>

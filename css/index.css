@@ -1,0 +1,146 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.active_border
+{
+    border-width: 0px 0px 3px 0px;
+    border-color:#cf4996;;
+    border-style: solid;
+}
+
+.tagline
+{
+    font-size: 3.5vmax;
+}
+
+.ftagline
+{
+    font-size: 2vmax;
+}
+.button
+{
+    background-color: #4c8bf5; 
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    border : 2px solid #4c8bf5;
+}
+
+.button:hover 
+{
+    background-color: white;
+    color: #4c8bf5;
+    border : 2px solid #4c8bf5;
+}
+
+.img-poster
+{
+    width: 80%;    
+}
+
+.poster
+{
+    color: white;
+    font-size: 2vmax;
+    padding-top: 4%;
+}
+
+.text-container
+{
+    margin-bottom: 45px;
+    margin-top: 5px;
+}
+
+.heading_main
+{
+    font-size: 2.5rem;
+}
+
+.centercard
+{
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.common
+{
+  transform: scale(0.7);
+}
+
+.commonb
+{
+    background-color: white;
+}
+
+.centercardb
+{
+    background-color: #fbdc29;
+}
+
+#more1
+{
+    display: none;
+}
+
+#more2
+{
+    display: none;
+}
+
+#more3
+{
+    display: none;
+}
+
+#more4
+{
+    display: none;
+}
+
+#more5
+{
+    display: none;
+}
+
+#more6
+{
+    display: none;
+}
+
+#more7
+{
+    display: none;
+}
+
+.carousel-cell {
+    width: 35%;
+  }
+
+
+
+
+@media only screen and (min-width: 770px)
+{
+    .text-container
+    {
+        margin-top: 5px;
+        margin-right: 45px;
+        margin-bottom: 45px;
+    }
+}
+
+@media only screen and (max-width: 770px)
+{
+    .carousel-cell
+    {
+        width: 100%;
+    }
+}
